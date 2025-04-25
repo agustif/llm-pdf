@@ -1,5 +1,5 @@
 [project]
-name = "llm-pdf-plugin"
+name = "llm-plugin-pdf"
 version = "0.1"
 description = "LLM plugin for loading text from PDF files (local or URL)"
 readme = "README.md"
@@ -24,7 +24,7 @@ Issues = "https://github.com/agustif/llm-pdf-plugin/issues"
 CI = "https://github.com/agustif/llm-pdf-plugin/actions"
 
 [project.entry-points.llm]
-pdf = "llm_pdf_plugin"
+pdf = "llm_plugin_pdf"
 
 [project.optional-dependencies]
 test = ["pytest"]
