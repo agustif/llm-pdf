@@ -44,6 +44,11 @@ jobs:
     - name: Install dependencies
       run: |
         pip install setuptools wheel build
+    - name: Clean previous builds
+      run: |
+        rm -rf dist/
+        rm -rf build/
+        rm -rf *.egg-info
     - name: Build
       run: |
         python -m build
