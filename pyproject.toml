@@ -1,0 +1,30 @@
+[project]
+name = "llm-pdf"
+version = "0.1"
+description = "LLM plugin for loading text from PDF files (local or URL)"
+readme = "README.md"
+authors = [{name = "Agusti F."}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.9"
+dependencies = [
+    "llm",
+    "PyMuPDF",
+    "requests"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/agustif/llm-pdf"
+Changelog = "https://github.com/agustif/llm-pdf/releases"
+Issues = "https://github.com/agustif/llm-pdf/issues"
+CI = "https://github.com/agustif/llm-pdf/actions"
+
+[project.entry-points.llm]
+pdf = "llm_pdf"
+
+[project.optional-dependencies]
+test = ["pytest"]
