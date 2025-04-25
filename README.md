@@ -1,9 +1,9 @@
-# llm-pdf
+# llm-pdf-plugin
 
-[![PyPI](https://img.shields.io/pypi/v/llm-pdf.svg)](https://pypi.org/project/llm-pdf/)
-[![Changelog](https://img.shields.io/github/v/release/agustif/llm-pdf?include_prereleases&label=changelog)](https://github.com/agustif/llm-pdf/releases)
-[![Tests](https://github.com/agustif/llm-pdf/actions/workflows/test.yml/badge.svg)](https://github.com/agustif/llm-pdf/actions/workflows/test.yml)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/agustif/llm-pdf/blob/main/LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/llm-pdf-plugin.svg)](https://pypi.org/project/llm-pdf-plugin/)
+[![Changelog](https://img.shields.io/github/v/release/agustif/llm-pdf-plugin?include_prereleases&label=changelog)](https://github.com/agustif/llm-pdf-plugin/releases)
+[![Tests](https://github.com/agustif/llm-pdf-plugin/actions/workflows/test.yml/badge.svg)](https://github.com/agustif/llm-pdf-plugin/actions/workflows/test.yml)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/agustif/llm-pdf-plugin/blob/main/LICENSE)
 
 LLM plugin for loading text from PDF files (local or URL) using PyMuPDF.
 
@@ -12,7 +12,7 @@ LLM plugin for loading text from PDF files (local or URL) using PyMuPDF.
 Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
 
 ```bash
-llm install llm-pdf
+llm install llm-pdf-plugin
 ```
 
 This plugin requires the `PyMuPDF` and `requests` packages.
@@ -39,7 +39,7 @@ llm fragment pdf:https://arxiv.org/pdf/2310.06825.pdf | llm -s "Summarize this P
 
 To set up this plugin locally, first checkout the code. Then create a new virtual environment:
 ```bash
-cd llm-pdf
+cd llm-pdf-plugin
 python -m venv venv
 source venv/bin/activate
 ```

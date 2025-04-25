@@ -1,6 +1,6 @@
 import llm
 import pytest
-from llm_pdf import pdf_loader
+from llm_pdf_plugin import pdf_loader
 from unittest.mock import patch, MagicMock
 from pathlib import Path
 import requests
@@ -30,7 +30,7 @@ def test_pdf_loader_local_file_success():
     assert "Dummy PDF file" in str(fragment) # Check for expected text
     assert fragment.source == str(DUMMY_PDF_PATH.resolve())
 
-@patch("llm_pdf.requests.get")
+@patch("llm_pdf_plugin.requests.get")
 def test_pdf_loader_url_success(mock_get):
     """Test loading text from a PDF URL."""
     test_url = "https://example.com/dummy.pdf"
@@ -71,7 +71,7 @@ def test_pdf_loader_local_file_not_pdf():
         if NOT_A_PDF_PATH.exists():
             NOT_A_PDF_PATH.unlink()
 
-@patch("llm_pdf.requests.get")
+@patch("llm_pdf_plugin.requests.get")
 def test_pdf_loader_url_download_error(mock_get):
     """Test error during URL download."""
     test_url = "https://example.com/dummy.pdf"
@@ -81,7 +81,7 @@ def test_pdf_loader_url_download_error(mock_get):
         pdf_loader(test_url)
     assert f"Failed to download PDF from URL {test_url}: Connection failed" in str(excinfo.value)
 
-@patch("llm_pdf.requests.get")
+@patch("llm_pdf_plugin.requests.get")
 def test_pdf_loader_url_not_pdf(mock_get):
     """Test error when URL does not point to a PDF content type."""
     test_url = "https://example.com/not_a_pdf.html"
@@ -95,7 +95,7 @@ def test_pdf_loader_url_not_pdf(mock_get):
         pdf_loader(test_url)
     assert "URL does not point to a PDF (Content-Type: text/html)" in str(excinfo.value)
 
-@patch("llm_pdf.fitz.open")
+@patch("llm_pdf_plugin.fitz.open")
 def test_pdf_loader_pdf_processing_error(mock_fitz_open):
     """Test error during PDF text extraction."""
     mock_fitz_open.side_effect = Exception("Corrupted PDF structure")

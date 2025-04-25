@@ -1,5 +1,5 @@
 [project]
-name = "llm-pdf"
+name = "llm-pdf-plugin"
 version = "0.1"
 description = "LLM plugin for loading text from PDF files (local or URL)"
 readme = "README.md"
@@ -18,13 +18,13 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project.urls]
-Homepage = "https://github.com/agustif/llm-pdf"
-Changelog = "https://github.com/agustif/llm-pdf/releases"
-Issues = "https://github.com/agustif/llm-pdf/issues"
-CI = "https://github.com/agustif/llm-pdf/actions"
+Homepage = "https://github.com/agustif/llm-pdf-plugin"
+Changelog = "https://github.com/agustif/llm-pdf-plugin/releases"
+Issues = "https://github.com/agustif/llm-pdf-plugin/issues"
+CI = "https://github.com/agustif/llm-pdf-plugin/actions"
 
 [project.entry-points.llm]
-pdf = "llm_pdf"
+pdf = "llm_pdf_plugin"
 
 [project.optional-dependencies]
 test = ["pytest"]
